@@ -1,4 +1,5 @@
 use std::fs;
+use crate::common::solution::Part;
 
 const ACTUAL_INPUT_FILE: &str = "src/day_03/resources/actual_input.txt";
 const DEMO_INPUT_FILE: &str = "src/day_03/resources/demo_input.txt";
@@ -33,9 +34,9 @@ fn find_max_joltage(bank: &str, num_of_batteries: usize) -> u64 {
 
     let max_index = bank.len() - num_of_batteries;
     let search_space = &bank[0..=max_index];
-    println!("search_space: {}", search_space);
+    // println!("search_space: {}", search_space);
     let max_battery = find_max_battery(&search_space);
-    println!("max: {:?}", max_battery);
+    // println!("max: {:?}", max_battery);
     let next_index = max_battery.index + 1;
 
     let next_joltage = find_max_joltage(&bank[next_index..bank.len()], num_of_batteries-1);
@@ -43,7 +44,7 @@ fn find_max_joltage(bank: &str, num_of_batteries: usize) -> u64 {
     return (multiplier * max_battery.joltage) + next_joltage;
 }
 
-pub fn solve(_part: u8, demo: bool) {
+pub fn solve(_part: Part, demo: bool) {
     println!("");
     println!("-----------------------");
     println!("Day 03: Lobby");

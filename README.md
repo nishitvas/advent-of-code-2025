@@ -5,13 +5,13 @@
 ```
 cargo run -- -h
 
-cargo run -- --day 1 --part 1
+cargo run -- --day 1
 ```
 
 ## Usage
 
 ```
-Usage: advent-of-code-2025 [OPTIONS] --day <DAY> --part <PART>
+Usage: advent-of-code-2025 [OPTIONS] --day <DAY>
 
 Options:
       --day <DAY>    Run solution for this day

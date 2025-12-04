@@ -1,4 +1,5 @@
 use std::fs;
+use crate::common::solution::Part;
 
 const STARTING_POS: i16 = 50;
 const DIAL_MAX: i16 = 100;
@@ -46,7 +47,7 @@ fn turn_dial(start_position: i16, instruction: &str) -> DialResult {
     }
 }
 
-pub fn solve(_part: u8, demo: bool) {
+pub fn solve(_part: Part, demo: bool) {
     println!("");
     println!("-----------------------");
     println!("Day 01: Secret Entrance");

@@ -1,4 +1,6 @@
 use clap::Parser;
+mod common;
+use common::solution::Part;
 
 mod day_01;
 mod day_02;
@@ -11,7 +13,7 @@ struct Cli {
     day: u8,
     /// Run solution for this part
     #[arg(long)]
-    part: u8,
+    part: Option<u8>,
     /// Use demo input
     #[arg(long)]
     demo: bool,
@@ -24,10 +26,17 @@ fn main() {
     println!("Advent of Code - 2025!");
     println!("======================");
 
+    let part: Part = match args.part {
+        Some(1) => Part::ONE,
+        Some(2) => Part::TWO,
+        Some(_) => Part::ALL,
+        None => Part::ALL,
+    };
+
     match args.day {
-        1 => day_01::solve(args.part, args.demo),
-        2 => day_02::solve(args.part, args.demo),
-        3 => day_03::solve(args.part, args.demo),
+        1 => day_01::solve(part, args.demo),
+        2 => day_02::solve(part, args.demo),
+        3 => day_03::solve(part, args.demo),
         _ => println!("Unsolved for day {:?}", args.day),
     }
 }

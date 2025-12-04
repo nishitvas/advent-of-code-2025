@@ -1,4 +1,5 @@
 extern crate itertools;
+use crate::common::solution::Part;
 
 use std::fs;
 use itertools::Itertools;
@@ -51,7 +52,7 @@ fn get_invalid_id_part2(id: &u64) -> u64 {
 }
 
 
-pub fn solve(_part: u8, demo: bool) {
+pub fn solve(_part: Part, demo: bool) {
     println!("");
     println!("-----------------------");
     println!("Day 02: Gift Shop");
