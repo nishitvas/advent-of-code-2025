@@ -1,6 +1,7 @@
 use clap::Parser;
 
 mod day_01;
+mod day_02;
 
 #[derive(Parser)]
 struct Cli {
@@ -24,6 +25,7 @@ fn main() {
 
     match args.day {
         1 => day_01::solve(args.part, args.demo),
+        2 => day_02::solve(args.part, args.demo),
         _ => println!("Unsolved for day {:?}", args.day),
     }
 }

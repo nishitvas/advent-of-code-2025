@@ -46,7 +46,7 @@ fn turn_dial(start_position: i16, instruction: &str) -> DialResult {
     }
 }
 
-pub fn solve(_: u8, demo: bool) {
+pub fn solve(_part: u8, demo: bool) {
     println!("");
     println!("-----------------------");
     println!("Day 01: Secret Entrance");
