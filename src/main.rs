@@ -8,6 +8,8 @@ mod day_03;
 mod day_04;
 mod day_05;
 mod day_06;
+mod day_07;
+mod day_08;
 
 #[derive(Parser)]
 struct Cli {
@@ -43,6 +45,8 @@ fn main() {
         4 => day_04::solve(part, args.demo),
         5 => day_05::solve(part, args.demo),
         6 => day_06::solve(part, args.demo),
+        7 => day_07::solve(part, args.demo),
+        8 => day_08::solve(part, args.demo),
         _ => println!("Unsolved for day {:?}", args.day),
     }
 }
